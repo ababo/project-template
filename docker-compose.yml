@@ -1,7 +1,9 @@
 version: '3'
 services:
-  app:
+  myservice:
     build:
-      context: ./go
+      context: ./myservice
+    ports:
+      - "8080:8080"
     volumes:
-    - ./go:/go/src
+      - ./myservice:/go/src
