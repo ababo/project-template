@@ -32,12 +32,10 @@ To perform unit-tests and launch the application services in debug mode run:
 docker-compose up
 ```
 
-To stop the application services run:
+To launch release version run:
 
 ```sh
-docker-compose down
+docker-compose -f docker-compose.release.yml up
 ```
-
-To launch release version use the `docker-compose.release.yml` file.
 
 Read the Docker documentation for further information.

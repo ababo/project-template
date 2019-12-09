@@ -2,8 +2,8 @@
 
 set -o errexit
 
-go install cmd/myapp
+go install cmd/myservice
 
 go test pkg/...
 
-$GOPATH/bin/myapp
+$GOPATH/bin/myservice

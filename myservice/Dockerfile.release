@@ -1,0 +1,7 @@
+FROM golang:1.13.4-alpine3.10
+ADD . /go/src
+RUN go install cmd/myservice
+
+FROM alpine:3.10.3
+COPY --from=0 /go/bin/myservice /
+CMD ["/myservice"]
